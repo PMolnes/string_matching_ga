@@ -12,7 +12,7 @@ public class App {
 
   private static final int MAX_GENERATIONS = 1000;
   private static final int POPULATION_SIZE = 1000;
-  private static final double CROSSOVER_PROBABILITY = 1.0;
+  private static final double CROSSOVER_PROBABILITY = 1;
   private static final double MUTATION_RATE = 0.01;
   private static final String TARGET = "Petter Molnes";
   private static Population population = new Population(TARGET, MUTATION_RATE, POPULATION_SIZE, CROSSOVER_PROBABILITY);

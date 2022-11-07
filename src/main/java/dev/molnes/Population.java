@@ -36,7 +36,7 @@ public class Population {
     }
 
     calculateFitnessForAll();
-    matingPool = new ArrayList<Chromosome>();
+    matingPool = new ArrayList<>();
     finished = false;
     cycles = 0;
     perfectScore = 1;

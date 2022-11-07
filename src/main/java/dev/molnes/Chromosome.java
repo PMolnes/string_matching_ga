@@ -54,6 +54,23 @@ public class Chromosome {
     return child;
   }
 
+  public Chromosome doublePointCrossover(Chromosome partner) {
+    Chromosome child = new Chromosome(genes.length);
+    int firstSplitIndex = random.nextInt(genes.length);
+    int secondSplitIndex = random.nextInt(genes.length);
+
+    for (int i = 0; i < genes.length; i++) {
+      if (i < firstSplitIndex) {
+        child.setGenesAtIndex(getGenes(), i);
+      } else if (i < secondSplitIndex) {
+        child.setGenesAtIndex(partner.getGenes(), i);
+      } else {
+        child.setGenesAtIndex(getGenes(), i);
+      }
+    }
+    return child;
+  }
+
   public void mutate(double mutationRate) {
     for (int i = 0; i < genes.length; i++) {
       if (random.nextDouble() < mutationRate) {
